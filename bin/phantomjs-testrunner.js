@@ -181,9 +181,9 @@ function processPage(status, page, resultsKey) {
         };
         var getResultsFromHtmlRunner = function() {
             return evaluate(page, function(){
-                var resultElem = document.querySelector(".html-reporter .alert .bar");
+                var resultElem = document.querySelector(".html-reporter .jasmine-alert .jasmine-bar");
                 if (!resultElem) {
-                    resultElem = document.querySelector(".jasmine_html-reporter .alert .bar");
+                    resultElem = document.querySelector(".jasmine_html-reporter .jasmine-alert .jasmine-bar");
                 }
                 return resultElem && resultElem.textContent &&
                     resultElem.textContent.match(/(\d+) spec.* (\d+) failure.*/) ||
